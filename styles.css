@@ -1,0 +1,63 @@
+body {
+    color: #8b0000;
+}
+
+q {
+    color: #4b0082;
+}
+
+h1 {
+
+    text-shadow: 5px 0.5px 4px red;
+}
+
+
+h2 {
+
+    font-weight: 900;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+.top {
+    color: #000000;
+}
+
+
+#unsung,
+#mission {
+    font-style: italic;
+}
+
+#mission {
+    color: rgb(0, 0, 255);
+    text-shadow: 5px 0.5px 4px red;
+}
+
+a:link{
+    color: green;
+}
+a:hover, a:focus{ color: purple;}
+p {
+    line-height: 2em;
+}
+
+ul {
+    font-style: oblique;
+    text-decoration: line-through;
+    list-style: upper-roman;
+    font-weight: 700;
+
+}
+
+footer {
+    color: rgb(0, 0, 0);
+}
+
+#more_heroes {
+    font-weight: 1000;
+}
+
+#mission+ p{
+    font-weight: bolder;
+}
