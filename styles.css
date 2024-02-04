@@ -1,28 +1,63 @@
+html {
+    height: 100%;
+}
+
+.topnav {
+    background-color: #2505dd02;
+    overflow: hidden;
+}
+
+.topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    font-family: fantasy;
+    transition: background-color 0.3s; /* Add transition for smooth color change */
+}
+
+.topnav a:hover {
+    background-color: #7b36c9;
+    color: #022596; /* Change the color of the text on hover */
+}
+
+.topnav a:active {
+    background-color: #a260e0;
+    color: #022596; /* Change the color of the text for the active link */
+}
+
+
+
+main{
+    padding: 20px;
+}
+
 body {
-    color: #8b0000;
+    color: #b668da;
+    height: 100%;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-attachment:fixed;
 }
 
 q {
-    color: #4b0082;
+    color: #ffffff;
 }
 
 h1 {
-
-    text-shadow: 5px 0.5px 4px red;
+    text-shadow: 5px 0.5px 4px rgb(0, 0, 0);
 }
 
-
 h2 {
-
     font-weight: 900;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-
 }
 
 .top {
-    color: #000000;
+    color: #bf70ec;
 }
-
 
 #unsung,
 #mission {
@@ -30,34 +65,83 @@ h2 {
 }
 
 #mission {
-    color: rgb(0, 0, 255);
-    text-shadow: 5px 0.5px 4px red;
+    color: rgb(137, 102, 219);
+    text-shadow: 5px 0.5px 4px rgb(0, 0, 0);
 }
 
-a:link{
-    color: green;
+a:link {
+    color: rgba(175, 67, 247, 0.993);
 }
-a:hover, a:focus{ color: purple;}
-p {
+
+a:hover, a:focus {
+    color: purple;
+}
+
+p.PR{
+    border: black outset;
+    background: fixed rgba(87, 8, 83, 0.342);
     line-height: 2em;
-}
+    
+    padding: 40px;
+    border-radius: 10%;
+    width: 35%;
+    height: auto;
+    opacity: 1.0;
+        float:left;}
+
 
 ul {
     font-style: oblique;
     text-decoration: line-through;
     list-style: upper-roman;
     font-weight: 700;
-
+    padding-left: 20px;
 }
 
 footer {
-    color: rgb(0, 0, 0);
+    
+
+    clear: both;
+    color: rgb(255, 255, 255);
 }
 
 #more_heroes {
-    font-weight: 1000;
+    float: right;
+    width: 30%;
+    margin-top: 10px;
+    text-align: center;
+    
 }
 
-#mission+ p{
+#mission + p {
     font-weight: bolder;
+}
+
+.bishop{
+    border-radius: 50%;
+    opacity: 0.5;
+}
+
+.character-select-menu {
+    display: flex;
+    justify-content: center; /* Horizontally center the children */
+}
+
+.column {
+    flex: 1;
+    
+}
+
+.character {
+    text-align: center;
+    margin: 10px;
+    background-color: #47434b;
+    color: rgb(142, 55, 214);
+    padding: 20px; /* Add padding to create space around the characters */
+}
+
+.character img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
 }
