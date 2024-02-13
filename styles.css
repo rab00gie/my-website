@@ -2,33 +2,81 @@ html {
     height: 100%;
 }
 
+@media only screen and (max-width: 768px) {
+    .container {
+        max-width: 10%; 
+    }
+
+    .topnav a {
+        padding: 10px 10px; 
+        font-size: 14px; 
+    }
+
+    main {
+        padding: 5px; 
+    }
+
+    p.PR {
+        width: 70%; 
+        padding: 10px; 
+    }
+
+    .bishop {
+        width: 100%; 
+    }
+
+}
+
+
+.container {
+    max-width: 88%;
+    margin: 0 auto;
+    padding: 20px;
+}
+/* NAV BAR */
 .topnav {
     background-color: #2505dd02;
     overflow: hidden;
+    position: fixed; 
+    right: 0;
+    top: 0; 
 }
 
 .topnav a {
-    float: left;
+    display: flex; 
+    flex-direction: column;
     color: #f2f2f2;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
     font-size: 17px;
     font-family: fantasy;
-    transition: background-color 0.3s; /* Add transition for smooth color change */
+    transition: background-color 0.3s; 
 }
+
 
 .topnav a:hover {
     background-color: #7b36c9;
-    color: #022596; /* Change the color of the text on hover */
+    color: #022596; 
 }
 
 .topnav a:active {
     background-color: #a260e0;
-    color: #022596; /* Change the color of the text for the active link */
+    color: #022596;
 }
 
+a:link {
+    color: rgb(175, 67, 247);
+}
 
+a:hover, a:focus {
+    color: purple;
+}
+/* HOME PAGE */
+.bishop{
+    border-radius: 50%;
+    opacity: 0.5;
+}
 
 main{
     padding: 20px;
@@ -45,7 +93,10 @@ body {
 q {
     color: #ffffff;
 }
-
+#legion{
+    width: 20%;
+    height: 20%;
+}
 h1 {
     text-shadow: 5px 0.5px 4px rgb(0, 0, 0);
 }
@@ -69,13 +120,7 @@ h2 {
     text-shadow: 5px 0.5px 4px rgb(0, 0, 0);
 }
 
-a:link {
-    color: rgba(175, 67, 247, 0.993);
-}
 
-a:hover, a:focus {
-    color: purple;
-}
 
 p.PR{
     border: black outset;
@@ -90,7 +135,7 @@ p.PR{
         float:left;}
 
 
-ul {
+#list{
     font-style: oblique;
     text-decoration: line-through;
     list-style: upper-roman;
@@ -104,7 +149,7 @@ footer {
     clear: both;
     color: rgb(255, 255, 255);
 }
-
+ /* The screaming man that opens to a new tab */
 #more_heroes {
     float: right;
     width: 30%;
@@ -117,31 +162,15 @@ footer {
     font-weight: bolder;
 }
 
-.bishop{
-    border-radius: 50%;
-    opacity: 0.5;
-}
 
-.character-select-menu {
-    display: flex;
-    justify-content: center; /* Horizontally center the children */
+@media only screen and ( max-width:768px){
+p.PR{
+    border: red outset;
 }
-
-.column {
-    flex: 1;
-    
+h1{
+    font-size: medium;
 }
-
-.character {
-    text-align: center;
-    margin: 10px;
-    background-color: #47434b;
-    color: rgb(142, 55, 214);
-    padding: 20px; /* Add padding to create space around the characters */
+h2{
+    font-size:medium
 }
-
-.character img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
 }

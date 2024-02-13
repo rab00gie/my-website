@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comment Section</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style4.css">
+
+    <header>
+        <div class="topnav">
+            <a class="active" href="index.html">Home</a>
+            <a class="active" href="rell.html">Heroes</a>
+            <a class="active" href="#contact">Contact</a>
+            <a class="active" href="Chat.html">Message Board</a>
+          </div>
+    </header>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-repeat:no-repeat;
+            height: 100%;
+            background-attachment: fixed;
+            margin: 0%;
+            background-size: cover;
+        }
+        #container {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            border: 1px solid #b50bdf;
+            border-radius: 5px;
+        }
+        #comment-box {
+            color: rgb(255, 255, 255);
+            list-style: none;
+            padding: 0;
+        }
+        .comment {
+            border-bottom: 1px solid #b50bdf;
+            padding: 10px 0;
+        }
+        .comment p {
+            margin: 0;
+        }
+        #input-box {
+            width: 100%;
+            padding: 5px;
+            margin-bottom: 10px;
+        }
+        #username-box {
+            width: 100%;
+            padding: 5px;
+            margin-bottom: 10px;
+        }
+        #send-button {
+            width: 100%;
+            padding: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body style="background-image: url(media/whatif.jpg) ;">
+    
+    <div id="container">
+        <input type="text" id="username-box" placeholder="Enter your username...">
+        <input type="text" id="input-box" placeholder="Write a comment...">
+        <button id="send-button">Post Comment</button>
+        <ul id="comment-box"></ul>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const commentBox = document.getElementById('comment-box');
+            const inputBox = document.getElementById('input-box');
+            const usernameBox = document.getElementById('username-box');
+            const sendButton = document.getElementById('send-button');
+
+            // Load comments from local storage when the page loads
+            loadComments();
+
+            sendButton.addEventListener('click', function() {
+                const username = usernameBox.value.trim();
+                const comment = inputBox.value.trim();
+                if (username !== '' && comment !== '') {
+                    addComment(username, comment);
+                    saveComment(username, comment); // Save comment to local storage
+                    inputBox.value = '';
+                } else {
+                    alert('Please enter both a username and a comment.');
+                }
+            });
+
+            function addComment(username, commentText) {
+                const commentItem = document.createElement('li');
+                commentItem.classList.add('comment');
+                commentItem.innerHTML = `<strong>${username}:</strong> ${commentText}`;
+                commentBox.appendChild(commentItem);
+            }
+
+            function saveComment(username, comment) {
+                // Retrieve existing comments or initialize an empty array
+                const comments = JSON.parse(localStorage.getItem('comments')) || [];
+                // Add the new comment to the array
+                comments.push({ username: username, comment: comment });
+                // Save the updated array back to local storage
+                localStorage.setItem('comments', JSON.stringify(comments));
+            }
+
+            function loadComments() {
+                // Retrieve comments from local storage
+                const comments = JSON.parse(localStorage.getItem('comments')) || [];
+                // Display each comment in the comment box
+                comments.forEach(function(comment) {
+                    addComment(comment.username, comment.comment);
+                });
+            }
+        });
+    </script>
+</body>
+</html>
