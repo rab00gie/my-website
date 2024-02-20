@@ -28,6 +28,9 @@ html {
 }
 
 
+  
+
+
 .container {
     max-width: 88%;
     margin: 0 auto;
@@ -40,6 +43,7 @@ html {
     position: fixed; 
     right: 0;
     top: 0; 
+    grid-area: sidebar;
 }
 
 .topnav a {
@@ -79,7 +83,12 @@ a:hover, a:focus {
 }
 
 main{
-    padding: 20px;
+   display: grid;
+   grid-template-areas: "topbar topbar topbar"
+                        "ads content sidebar"
+                        "footer footer footer" ;
+                        grid-template-columns: 1fr 3fr 1fr;
+                        grid-template-rows: 50px auto 70px ;
 }
 
 body {
@@ -88,14 +97,18 @@ body {
     margin: 0;
     background-repeat: no-repeat;
     background-attachment:fixed;
+    
+    grid-gap: 16px;
 }
 
 q {
     color: #ffffff;
 }
 #legion{
+    grid-area: ads;
     width: 20%;
     height: 20%;
+    
 }
 h1 {
     text-shadow: 5px 0.5px 4px rgb(0, 0, 0);
@@ -115,7 +128,7 @@ h2 {
     font-style: italic;
 }
 
-#mission {
+#mission { grid-area: content;
     color: rgb(137, 102, 219);
     text-shadow: 5px 0.5px 4px rgb(0, 0, 0);
 }
@@ -123,16 +136,17 @@ h2 {
 
 
 p.PR{
+    grid-area: content;
     border: black outset;
-    background: fixed rgba(87, 8, 83, 0.342);
-    line-height: 2em;
     
+    line-height: 2em;
+    margin: px;
     padding: 40px;
     border-radius: 10%;
     width: 35%;
     height: auto;
     opacity: 1.0;
-        float:left;}
+        }
 
 
 #list{
@@ -144,13 +158,14 @@ p.PR{
 }
 
 footer {
-    
+    grid-area: footer;
 
     clear: both;
     color: rgb(255, 255, 255);
 }
  /* The screaming man that opens to a new tab */
 #more_heroes {
+    grid-area: ads;
     float: right;
     width: 30%;
     margin-top: 10px;
@@ -174,3 +189,19 @@ h2{
     font-size:medium
 }
 }
+.flex-container {
+    display: flex;
+    flex-direction: column; /* Align items vertically */
+    justify-content: flex-end; /* Align items to the bottom/right */
+    height: 100vh; /* Set the height of the container */
+  }
+  
+  .flex-item {
+    margin: 10px;
+  }
+  
+  .flex-item img {
+    width: 200px; /* Adjust width as needed */
+    height: auto; /* Maintain aspect ratio */
+  }
+  

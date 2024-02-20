@@ -1,0 +1,117 @@
+/* Media queries for responsiveness */
+@media only screen and (min-width: 768px) {
+    .grid-container {
+        grid-template-columns: 1fr 3fr; /* Adjust grid layout for larger screens */
+    }
+}
+
+
+/* Reset default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    
+}
+
+/* Navigation bar styles */
+.topnav {
+    background-color: #2505dd02;
+    overflow: hidden;
+    position: fixed; 
+    right: 0;
+    top: 0; 
+    
+}
+
+.topnav a {
+    display: flex; 
+    flex-direction: column;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    font-family: fantasy;
+    transition: background-color 0.3s; 
+}
+
+
+.topnav a:hover {
+    background-color: #7b36c9;
+    color: #022596; 
+}
+
+.topnav a:active {
+    background-color: #a260e0;
+    color: #022596;
+}
+
+/* Grid layout */
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 3fr 0.5fr;
+    grid-template-rows: 0.3fr 1fr 1fr;
+    grid-gap:2rem;
+    padding: 20px;
+}
+
+.kang{
+   grid-column: 1;
+   grid-row: 1 / 4;
+}
+    
+    
+
+
+.sidebar{
+    width: 200px; /* Set width of the sidebar */
+    background-color: #ca048869;
+    color: white;
+    grid-column: 1;
+    grid-row: 1 / 4;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);}
+ 
+    .header{ background-color: #ca048869;
+        color: white;
+    padding: 20px;
+    grid-column: 2 / 2;
+    grid-row: 1;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+ }
+
+.content{
+    background-color: #ca048869;
+    color: white;
+    grid-column: 2 / 3;
+    grid-row: 2 / 4;
+    padding: 40px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    
+    
+    
+}
+.footer{
+    background-color: #33333300;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+    margin-top: auto; /* Push the footer to the bottom */
+    width: 100%; /* Occupy full width */
+    grid-row: 4 / -1;
+    clear: both;
+}
+

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Page</title>
+
+
+    <div class="topnav">
+        <a href="index2.html">Home</a>
+        <a href="rell.html">heroes</a>
+        <a href="Chat.html">Message Board</a>
+        <a href="Contact.html">Contact</a>
+    </div>
+    <style>
+     @media screen and (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                align-items: center;
+            }
+            .contact {
+                width: 80%;
+                margin-bottom: 20px;
+            }
+        }
+
+
+
+
+
+.topnav {
+    background-color: #2505dd02;
+    overflow: hidden;
+    position: fixed; 
+    right: 0;
+    top: 0; 
+    
+}
+
+.topnav a {
+    display: flex; 
+    flex-direction: column;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    font-family: fantasy;
+    transition: background-color 0.3s; 
+}
+
+
+.topnav a:hover {
+    background-color: #7b36c9;
+    color: #022596; 
+}
+
+.topnav a:active {
+    background-color: #7b36c9;
+    color: #022596;
+}
+        
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-around;
+            width: 80%;
+        }
+
+        .contact {
+            width: 30%;
+            padding: 20px;
+            border-radius: 10px;
+            transition: transform 0.3s;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+        }
+
+        .contact:hover {
+            transform: translateY(-10px);
+        }
+
+        .instagram {
+            background: linear-gradient(to bottom right, #833ab4, #fd1d1d, #fcb045);
+        }
+
+        .twitch {
+            background: linear-gradient(to bottom right, #6441a5, #2a0845);
+        }
+
+        .linkedin {
+            background: linear-gradient(to bottom right, #0077b5, #0e76a8);
+        }
+
+        h2 {
+            margin-bottom: 20px;
+            text-align: center;
+            color: white;
+        }
+
+        p {
+            color: white;
+        }
+    </style>
+</head>
+<body style="background-image: url(media/Big\ G.jpg);">
+    <div class="container">
+        <div class="contact instagram">
+            <h2>Instagram</h2>
+            <p>Follow me on Instagram for updates! <a href="https://www.instagram.com/rab00gie/" target="_blank">Click Here</a></p>
+        </div>
+        <div class="contact twitch">
+            <h2>Twitch</h2>
+            <p>Subscribe to my Twitch channel for live streams! <a href="https://www.twitch.tv/rab00gie" target="_blank">Click Here</a></p> 
+        </div>
+        <div class="contact linkedin">
+            <h2>LinkedIn</h2>
+            <p>Connect with me on LinkedIn for professional networking! <a href="https://www.linkedin.com/in/ryan-harris-7b06b5196/" target="_blank">Click Here</a></p>
+        </div>
+    </div>
+</body>
+</html>

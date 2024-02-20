@@ -1,4 +1,36 @@
 
+@media only screen and (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .imgContainer {
+    width: 100%;
+    position: relative;
+    height: auto;
+    left: 0;
+  }
+
+  .slide_div {
+    margin-right: 0;
+    margin-bottom: 50px;
+  }
+
+  .img {
+    height: auto;
+    width: 80%;
+  }
+
+  .button {
+    width: 80%;
+    height: auto;
+  }
+}
+
+/* Add other media queries as needed */
+
+
 
 #body{
   width: 100%;
@@ -39,21 +71,9 @@
   top: 50%;
 }
 
-.text-overlay {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: rgba(255, 255, 255, 0.5); 
-  padding: 10px 20px;
-  border-radius: 5px;
-  transition: opacity 0.5s ease; 
-}
 
-.text-overlay h2 {
-  margin:2px;
-  color: #000; 
-}
+
+
 
 .slide_div {
   position: relative;
@@ -103,6 +123,8 @@
   margin: 0 30px 0 30px;
 }
 
+
+
 img{
   position: relative;
   height: 370px;
@@ -120,11 +142,21 @@ img{
   transition: 0.7s;
   background-color: rgba(0, 0, 0, 0.4);
   border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  opacity: 0;
+  
+  
 }
+
 
 .button:hover{
   background-color: rgba(0, 0, 0, 0.2);
+  opacity: 1;
 }
+
 
 #slider1:target ~ .imgContainer #img1,
 #slider1:target ~ .imgContainer #button1{
