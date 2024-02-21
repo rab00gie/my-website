@@ -2,30 +2,7 @@ html {
     height: 100%;
 }
 
-@media only screen and (max-width: 768px) {
-    .container {
-        max-width: 10%; 
-    }
 
-    .topnav a {
-        padding: 10px 10px; 
-        font-size: 14px; 
-    }
-
-    main {
-        padding: 5px; 
-    }
-
-    p.PR {
-        width: 70%; 
-        padding: 10px; 
-    }
-
-    .bishop {
-        width: 100%; 
-    }
-
-}
 
 
   
@@ -37,45 +14,54 @@ html {
     padding: 20px;
 }
 /* NAV BAR */
-.topnav {
-    background-color: #2505dd02;
+nav{
+    background-color:#2505dd02 ;
     overflow: hidden;
-    position: fixed; 
-    right: 0;
-    top: 0; 
-    grid-area: sidebar;
+    left: 0;
+    top: 0;
+    
+}
+nav ul{
+    display: flex;
+    flex-direction: row;
+   
+    list-style: none;
+    padding: 10px;
+    margin: 0;
+}
+nav li{
+    background: #ffffff00;
+    width: 150px;
+    margin: 0 15px 15px 0;
+    padding: 5px;
+    text-align: center;
+
 }
 
-.topnav a {
-    display: flex; 
-    flex-direction: column;
+nav a{
+    text-decoration: none;
     color: #f2f2f2;
     text-align: center;
     padding: 14px 16px;
-    text-decoration: none;
     font-size: 17px;
     font-family: fantasy;
-    transition: background-color 0.3s; 
+    transition: background-color 0.3s;
 }
 
-
-.topnav a:hover {
+nav a:hover {
     background-color: #7b36c9;
     color: #022596; 
 }
-
-.topnav a:active {
+nav a:active {
     background-color: #a260e0;
-    color: #022596;
-}
-
-a:link {
-    color: rgb(175, 67, 247);
-}
-
-a:hover, a:focus {
-    color: purple;
-}
+    color: #022596;}
+    
+    nav a:link {
+        color: rgb(175, 67, 247);
+    }
+    
+    nav a:hover, a:focus {
+        color: purple;}
 /* HOME PAGE */
 .bishop{
     border-radius: 50%;
@@ -178,30 +164,46 @@ footer {
 }
 
 
-@media only screen and ( max-width:768px){
-p.PR{
-    border: red outset;
-}
-h1{
-    font-size: medium;
-}
-h2{
-    font-size:medium
-}
-}
-.flex-container {
-    display: flex;
-    flex-direction: column; /* Align items vertically */
-    justify-content: flex-end; /* Align items to the bottom/right */
-    height: 100vh; /* Set the height of the container */
-  }
+@media only screen and (max-width: 768px) {
+    p.PR {
+      h1 {
+        font-size: medium;
+      }
+      h2 {
+        font-size: medium;
+      }
+      width: 70%;
+      padding: 10px;
+      border: red outset;
+    }
   
-  .flex-item {
-    margin: 10px;
-  }
+    .flex-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      height: 100vh;
+    }
   
-  .flex-item img {
-    width: 200px; /* Adjust width as needed */
-    height: auto; /* Maintain aspect ratio */
+    .flex-item {
+      margin: 10px;
+    }
+  
+    .flex-item img {
+      width: 200px;
+      height: auto;
+    }
+  
+    .container {
+      max-width: 10%;
+    }
+  
+    .topnav a {
+      padding: 10px 10px;
+      font-size: 14px;
+    }
+  
+    main {
+      padding: 5px;
+    }
   }
   
