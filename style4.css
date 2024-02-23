@@ -167,6 +167,58 @@ img{
   
 }
 
+.hidden-text {
+  display: none;
+  color: rgb(71, 64, 64);
+  text-align: center;
+  position: absolute;
+  bottom: 10px;
+  
+}
+.text-slider1{
+  color: rgb(0, 0, 0);
+}
+.text-slider2{
+  color: rgb(255, 255, 255);
+  position: absolute;
+  bottom: 10px;
+}
+.text-slider3{
+  color: rgb(255, 255, 255);
+  position: absolute;
+  bottom: 10px;
+}
+.text-slider4{
+  color: rgb(255, 255, 255);
+  position: absolute;
+  bottom: 10px;
+}
+.text-slider5{
+  color: rgb(0, 0, 0);
+  position: absolute;
+  bottom: 10px;
+}
+.text-slider6{
+  color: rgb(0, 0, 0);
+  position: absolute;
+  bottom: 10px;
+}
+.text-slider7{
+  color: rgb(2, 2, 2);
+  position: absolute;
+  bottom: 10px;
+}
+
+
+
+
+
+
+
+.button:hover .hidden-text {
+  display: block;
+}
+
 
 .button:hover{
   background-color: rgba(0, 0, 0, 0.2);
