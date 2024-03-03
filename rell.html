@@ -78,7 +78,38 @@
         </div>
         
     </div>
+    <script>
+        // JavaScript code for making the slider draggable
+        const slider = document.getElementById('slider');
+        let isDragging = false;
+        let startX;
+        let translateX = 0;
     
+        slider.addEventListener('mousedown', (e) => {
+          isDragging = true;
+          startX = e.clientX - slider.offsetLeft;
+          slider.style.cursor = 'grabbing';
+        });
+    
+        slider.addEventListener('mousemove', (e) => {
+          if (!isDragging) return;
+          e.preventDefault();
+          const x = e.clientX - slider.offsetLeft;
+          const walk = (x - startX) * 2; // Adjust sensitivity as needed
+          translateX += walk;
+          slider.style.transform = `translateX(${translateX}px)`;
+        });
+    
+        slider.addEventListener('mouseup', () => {
+          isDragging = false;
+          slider.style.cursor = 'grab';
+        });
+    
+        slider.addEventListener('mouseleave', () => {
+          isDragging = false;
+          slider.style.cursor = 'grab';
+        });
+      </script>
 </body>
 <footer> <div class="footer">     <hr>
     <strong>&copy;<code>Ryan Harris Project CIS155</code> </strong></div></footer>

@@ -1,5 +1,9 @@
 
-
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 nav{
   background-color:#2505dd02 ;
   overflow: hidden;
@@ -107,12 +111,6 @@ nav a:active {
   max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
-}
-
-
-
-
-.container{
   width: 100%;
   height: 90vh;
   display: flex;
@@ -121,8 +119,9 @@ nav a:active {
   overflow: hidden;
 }
 
+
 .imgContainer{
-  width: 80%;
+  width: 90%;
   height: 300px;
   position: absolute;
   left: 0;
@@ -142,9 +141,9 @@ nav a:active {
 
 
 img{
-  position: relative;
-  height: 370px;
-  width: 240px;
+  position:relative;
+  height: 200px;
+  width: 200px;
   filter: saturate(10%);
   transition: 0.7s;
   background-color: rgba(0, 0, 0, 0.4);
@@ -284,10 +283,10 @@ img{
 
 
 #slider1:target ~ .imgContainer{
-  left: 60%;
+  left: 50%;
 }
 #slider2:target ~ .imgContainer{
-  left: 40%;
+  left: 50%;
 }
 #slider3:target ~ .imgContainer{
   left: 20%;
@@ -309,31 +308,26 @@ img{
 .img{height: 370px;}
 
 
-@media only screen and (max-width: 768px) {
-  .container {
-    flex-direction: column;
-    height: auto;
-  }
+@media screen and (min-width: 320px) and (max-width: 768px){
 
-  .imgContainer {
-    width: 100%;
-    position: relative;
-    height: auto;
-    left: 0;
-  }
-
-  .slide_div {
-    margin-right: 0;
-    margin-bottom: 50px;
-  }
-
-  .img {
-    height: auto;
-    width: 80%;
-  }
-
-  .button {
-    width: 80%;
-    height: auto;
-  }
+#slider1:target ~ .imgContainer{
+  left: 90%;
 }
+#slider2:target ~ .imgContainer{
+  left: 80%;
+}
+#slider3:target ~ .imgContainer{
+  left: 40%;
+}
+#slider4:target ~ .imgContainer{
+  left: 0%;
+}
+#slider5:target ~ .imgContainer{
+  left: -40%;
+}
+#slider6:target ~ .imgContainer{
+  left: -80%;
+}
+#slider7:target ~ .imgContainer{
+  left: -90%;
+}}
