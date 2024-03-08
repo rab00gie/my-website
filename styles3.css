@@ -8,12 +8,19 @@
     box-sizing: border-box;
 }
 
+
+
+
+
+
+
 /* Body styles */
 body {
     font-family: "Kode Mono", monospace;
-    background-color: #f0f0f0;
+    background-color: #ffffff;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    
     
 }
 
@@ -22,6 +29,7 @@ body {
 nav{
     background-color:#2505dd02 ;
     overflow: hidden;
+    
     left: 0;
     top: 0;
     
@@ -75,13 +83,7 @@ nav a:active {
     grid-gap: 16px;
 }
 
-.kang{
-   grid-column: 1;
-   grid-row: 1 / 4;
-   
-   
-}
-    
+ 
     
 
 
@@ -93,7 +95,7 @@ nav a:active {
     grid-row: 1 / 4;
     padding: 20px;
     border-radius: 10px;
-    border: #022596 double 5px;
+    border: #ffffff double 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);}
  
     .header{ background-color: #ca048869;
@@ -135,6 +137,7 @@ nav a:active {
 /* controls message borad page */
 .chat_body {
     font-family: Arial, sans-serif;
+    color: white;
     margin: 0;
     padding: 0;
     background-repeat:no-repeat;
@@ -150,7 +153,7 @@ nav a:active {
     border: 1px solid #b50bdf;
     border-radius: 5px;
 }
-#comment-box {
+#comment-box1 {
     color: rgb(255, 255, 255);
     list-style: none;
     padding: 0;
@@ -161,18 +164,19 @@ nav a:active {
 }
 .comment p {
     margin: 0;
+    
 }
 #input-box {
     width: 100%;
     padding: 5px;
     margin-bottom: 10px;
 }
-#username-box {
+#username-box1 {
     width: 100%;
     padding: 5px;
     margin-bottom: 10px;
 }
-#send-button {
+#send-button1 {
     width: 100%;
     padding: 5px;
     cursor: pointer;
@@ -184,14 +188,10 @@ nav a:active {
     justify-content: space-around;
     
 }
-img{
+.pic1{
     position:relative;
-    height: 200px;
-    width: 180px;
-    filter: saturate(10%);
+   filter: saturate(30%);
     transition: 0.7s;
-    background-color: rgba(0, 0, 0, 0.4);
-    border-radius: 20px;
 }
   
 /* Media queries for responsiveness */

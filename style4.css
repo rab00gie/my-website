@@ -4,6 +4,7 @@
   padding: 0;
   box-sizing: border-box;
 }
+/* nav bar */
 nav{
   background-color:#2505dd02 ;
   overflow: hidden;
@@ -53,7 +54,7 @@ nav a:active {
   nav a:hover, a:focus {
       color: purple;}
 
-
+/* end of nav bar */
 
 #body{
   width: 100%;
@@ -152,10 +153,10 @@ img{
 
 .button{
   position: absolute;
-  width: 240px;
+  width: 210px;
   height: 370px;
   transition: 0.7s;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0);
   border-radius: 20px;
   display: flex;
   justify-content: center;
@@ -165,7 +166,7 @@ img{
   
   
 }
-
+/* hidden text */
 .hidden-text {
   display: none;
   color: rgb(71, 64, 64);
@@ -207,12 +208,6 @@ img{
   position: absolute;
   bottom: 10px;
 }
-
-
-
-
-
-
 
 .button:hover .hidden-text {
   display: block;
