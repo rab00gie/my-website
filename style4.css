@@ -62,6 +62,10 @@ nav a:active {
   display: grid;
   
 }
+.h1{
+  text-align: center;
+  color: white
+}
 
 
 
@@ -207,6 +211,15 @@ img{
   color: rgb(2, 2, 2);
   position: absolute;
   bottom: 10px;
+}
+.new_p1{
+  text-align: center;
+  color: rgb(179, 255, 0);
+}
+
+.new_p{
+  text-align: center;
+  color: rgb(255, 0, 212);
 }
 
 .button:hover .hidden-text {
